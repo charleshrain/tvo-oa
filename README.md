@@ -1,7 +1,7 @@
 This is an online job assignment
 
 Technologies:
-Next.js, daisyui, vitest, eslint, tailwind, Open Weather Map API
+Next.js, daisyui, vitest, eslint, tailwind, Open Weather Map API, ARIA Dev Tools
 
 to run:
 npm run build
@@ -13,6 +13,3 @@ npm run lint
 
 Project is live (Jan 2025) on:
 https://tvo-oa-charles-rains-projects.vercel.app/
-
-Accessibility tested with:
-https://www.accessibilitychecker.org/
