@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+*.iws
+
+# Local configuration files
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries/
+.idea/vcs.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/*.ipr
+*.ipr
