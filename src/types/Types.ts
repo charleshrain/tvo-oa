@@ -9,7 +9,9 @@ export type Location = {
     state: string;
 };
 
-
+export type LocationInputProps = {
+    onSelectLocation: (location: Location) => Promise<void>;
+};
 
 export type WeatherData = {
     coord: {
@@ -55,3 +57,8 @@ export type WeatherData = {
     cod: number | string;
 };
 
+export type WeatherViewData = WeatherData | null
+
+export interface WeatherDisplayProps {
+    weatherData: WeatherData;
+}
