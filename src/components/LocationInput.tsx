@@ -56,7 +56,7 @@ export default function LocationInput({onSelectLocation}: LocationInputProps) {
                             className="px-3 py-2 bg-black  hover:bg-gray-700 cursor-pointer"
                             onClick={() => handleSelect(location)}
                         >
-                            {location.name + ", " + location.state + ', ' + location.country}
+                            {`${location.name}, ${location.state || "Unknown State"}, ${location.country}`}
                         </li>
                     ))}
                 </ul>
