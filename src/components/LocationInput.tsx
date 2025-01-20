@@ -87,6 +87,7 @@ export default function LocationInput({onSelectLocation}: LocationInputProps) {
                 onFocus={() => setShowDropdown(true)}
                 onBlur={handleBlur}
                 onKeyDown={handleKeyDown}
+                aria-expanded={showDropdown}
                 placeholder={"Enter location"}
                 className="max-w-full px-3 py-2 shadow-sm focus:outline-none focus:ring focus:ring-blue-300"
             />
@@ -94,7 +95,7 @@ export default function LocationInput({onSelectLocation}: LocationInputProps) {
             {showDropdown && suggestions.length > 0 && (
                 <ul
                     ref={listRef}
-                    className="border shadow-md w-full max-h-48 overflow-y-auto min-w-[300px]"
+                    className="border shadow-md w-full max-h-48 overflow-y-auto min-w-[300px] bg-black"
                     role="listbox"
                 >
                     {suggestions.map((location: Location, index: number) => (
@@ -103,16 +104,15 @@ export default function LocationInput({onSelectLocation}: LocationInputProps) {
                             className={`px-3 py-2 ${
                                 focusedIndex === index
                                     ? "bg-gray-700 text-white"
-                                    : "bg-black hover:bg-gray-700"
+                                    : "bg-black text-white hover:bg-gray-700"
                             } cursor-pointer`}
                             onMouseDown={() => handleSelect(location)}
+                            onClick={() => handleSelect(location)}
                             role="option"
                             tabIndex={0}
                             aria-selected={focusedIndex === index}
                         >
-                            {`${location.name}, ${location.state || "Unknown State"}, ${
-                                location.country
-                            }`}
+                            {`${location.name}, ${location.state || "Unknown State"}, ${location.country}`}
                         </li>
                     ))}
                 </ul>
