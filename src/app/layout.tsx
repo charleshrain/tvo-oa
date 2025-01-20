@@ -17,7 +17,7 @@ export default function RootLayout({
     return (
         <html lang="en" className={"bg-[#333A43]"}>
         <body className={" w-screen flex justify-center py-10 bg-[#333A43]"}>
-        <div className={"lg:w-[700px] sm:w-screen "}>
+        <div className={"lg:w-[700px] w-screen "}>
             <header>
                 <NavBar/>
             </header>
