@@ -2,7 +2,7 @@ import {Location, WeatherData} from "@/types/Types";
 
 // Get unique location suggestions based on user input
 export async function fetchLocationSuggestions(query: string): Promise<Location[]> {
-    const locationQuery = `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=20&appid=${process.env.API_KEY}`;
+    const locationQuery = `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=20&appid=${process.env.API_KEY}`;
     const response = await fetch(locationQuery);
     const locations: Location[] = await response.json();
 
