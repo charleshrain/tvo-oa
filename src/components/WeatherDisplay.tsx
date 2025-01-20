@@ -33,11 +33,11 @@ function WeatherDisplay({ weatherData }: WeatherDisplayProps) {
             {/* Current Weather Section */}
             <div className=" mt-2">
                 <div className="flex justify-between flex-wrap">
-                    <h2 className="text-2xl font-bold content-center">Current Temp: {weatherData.main.temp}°C</h2>
+                    <h2 role="heading" className="text-2xl font-bold content-center">Current Temp: {weatherData.main.temp}°C</h2>
                     <div className="relative w-16 h-16">
                         <Image
                             src={imgSrc}
-                            alt={weatherData.weather[0].description || "Weather icon"}
+                            alt={"weather image: " + weatherData.weather[0].description || "Weather icon"}
                             layout="fill"
                             objectFit="contain"
                         />
@@ -45,10 +45,10 @@ function WeatherDisplay({ weatherData }: WeatherDisplayProps) {
                 </div>
                 <div className="additional-info grid grid-cols-3 gap-4 mt-4 text-sm text-gray-700">
                     {/* col 1 */}
-                    <div>Feels like: <strong>{weatherData.main.feels_like} °C</strong></div>
+                    <div>Feels: <strong>{weatherData.main.feels_like} °C</strong></div>
                     <div>Wind: <strong>{weatherData.wind.speed} km/h</strong></div>
                     {/* col 2 */}
-                    <div>Pressure: <strong>{weatherData.main.pressure} hPa</strong></div>
+                    <div>Baro: <strong>{weatherData.main.pressure } hPa</strong></div>
                     <div>Humidity: <strong>{weatherData.main.humidity} %</strong></div>
                     {/* col 3 */}
                     <div>Clouds: <strong>{weatherData.clouds.all} %</strong></div>
